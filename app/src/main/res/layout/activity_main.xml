@@ -55,7 +55,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleHome">
 
@@ -147,7 +146,7 @@
         android:includeFontPadding="false"
         android:text="Get Admission Now"
         android:textAlignment="center"
-        android:textColor="#EDEDE9"
+        android:textColor="#FEFDFB"
         android:textSize="20sp"
         app:chipBackgroundColor="#D19E78"
         app:chipCornerRadius="50dp"
@@ -155,7 +154,8 @@
         app:chipMinHeight="50dp"
         app:chipMinTouchTargetSize="50dp"
         app:chipStartPadding="20dp"
-        app:chipStrokeColor="#FF5722"
+        app:chipStrokeColor="#F5EBE0"
+        app:chipStrokeWidth="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
