@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignWithParentIfMissing="false"
+    android:background="#F5EBE0"
     tools:context=".MainActivity">
 
     <com.smarteist.autoimageslider.SliderView
