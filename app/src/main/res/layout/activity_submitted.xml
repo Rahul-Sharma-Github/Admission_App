@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutSubmitted"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5EBE0"
     tools:context=".SubmittedActivity">
 
     <TextView
@@ -37,13 +39,43 @@
         app:layout_constraintTop_toBottomOf="@+id/submitTitle" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="280dp"
-        android:layout_height="207dp"
-        android:layout_marginTop="15dp"
+        android:id="@+id/ivDone"
+        android:layout_width="196dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/submitSubTitle"
         app:srcCompat="@drawable/done" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Confirmation will be sent to your Email !"
+        android:textAlignment="center"
+        android:textColor="#0DAC57"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDone" />
+
+    <Button
+        android:id="@+id/btnGoHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#12D66E"
+        android:padding="20dp"
+        android:text="Go To Home"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirm" />
 </androidx.constraintlayout.widget.ConstraintLayout>
