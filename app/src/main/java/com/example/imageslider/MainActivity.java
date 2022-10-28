@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         AdmissionChipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in=new Intent(MainActivity.this,SubmittedActivity.class);
+                Intent in=new Intent(MainActivity.this,FormScrollingActivity.class);
                 startActivity(in);
             }
         });

@@ -20,6 +20,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Imageslider">
         <activity
+            android:name=".FormScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_form_scrolling"
+            android:theme="@style/Theme.Imageslider.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SubmittedActivity"
             android:exported="false">
             <meta-data
