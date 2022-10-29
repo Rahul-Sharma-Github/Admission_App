@@ -1,6 +1,7 @@
 package com.example.imageslider;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,18 +9,16 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.imageslider.databinding.ActivityFormScrollingBinding;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
+import com.google.android.material.snackbar.Snackbar;
 
 
 public class FormScrollingActivity extends AppCompatActivity {
-
-    private ActivityFormScrollingBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityFormScrollingBinding.inflate(getLayoutInflater());
+        com.example.imageslider.databinding.ActivityFormScrollingBinding binding = ActivityFormScrollingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         Toolbar toolbar = binding.toolbar;
@@ -36,14 +35,13 @@ public class FormScrollingActivity extends AppCompatActivity {
         //fab.hide();
 
         //Click Event on FloatingActionButton
-        /*
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
 
 
     }
