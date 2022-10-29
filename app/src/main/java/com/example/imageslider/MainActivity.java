@@ -1,10 +1,10 @@
 package com.example.imageslider;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.chip.Chip;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         AdmissionChipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in=new Intent(MainActivity.this,FormScrollingActivity.class);
+                Intent in=new Intent(MainActivity.this,FormActivity.class);
                 startActivity(in);
             }
         });
