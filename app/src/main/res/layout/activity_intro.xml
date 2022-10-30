@@ -49,4 +49,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoTitle" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:progress="@integer/material_motion_duration_medium_2"
+        android:progressTint="#00BCD4"
+        android:progressTintMode="multiply"
+        android:secondaryProgress="@integer/material_motion_duration_long_1"
+        android:secondaryProgressTint="#FFEB3B"
+        android:secondaryProgressTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoLoadingTitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
