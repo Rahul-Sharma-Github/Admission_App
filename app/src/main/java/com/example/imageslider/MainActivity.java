@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     //Declaration of Variables for Binding
     Chip AdmissionChipButton;
 
+    Chip chip1,chip2,chip3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,49 @@ public class MainActivity extends AppCompatActivity {
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
         sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
         sliderView.startAutoCycle();
+
+
+        //binding the MainActivity Page's PDF chip buttons
+        chip1=(Chip) findViewById(R.id.chip1);
+        chip2=(Chip) findViewById(R.id.chip2);
+        chip3=(Chip) findViewById(R.id.chip3);
+
+
+        //chip1 click event to open Admission Notification PDF Page
+        chip1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(getApplicationContext(),AdmissionNotification.class);
+                intent1.putExtra("pdf_url","https://drive.google.com/file/d/11CaBgX6jcqc336eW6KtJRXXp11ss_Qom/view?usp=sharing");
+                startActivity(intent1);
+            }
+        });
+
+
+
+        //chip2 click event to open Course and Eligibility PDF Page
+        chip2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2=new Intent(getApplicationContext(),CourseEligibility.class);
+                intent2.putExtra("pdf_url","https://drive.google.com/file/d/14IP1lM2xbUSNWPEb_RRUMYDjJ75fzdoz/view?usp=sharing");
+                startActivity(intent2);
+            }
+        });
+
+
+
+        //chip3 click event to open Prospectus PDF Page
+        chip3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3=new Intent(getApplicationContext(),Prospectus.class);
+                intent3.putExtra("pdf_url","https://drive.google.com/file/d/12L3m4_Wjzs0qkcImwhbe7eth33Gdoy1R/view?usp=sharing");
+                startActivity(intent3);
+            }
+        });
+
+
 
     }
 }

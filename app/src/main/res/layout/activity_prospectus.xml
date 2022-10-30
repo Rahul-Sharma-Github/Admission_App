@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5EBE0"
+    android:orientation="vertical"
+    tools:context=".Prospectus">
+
+    <TextView
+        android:id="@+id/prospectusTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:singleLine="false"
+        android:text="Prospectus 2022-23"
+        android:textAlignment="center"
+        android:textColor="#1E1D1D"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/dividerProspectus"
+        android:layout_width="250dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTintMode="add" />
+
+    <WebView
+        android:id="@+id/webViewProspectus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:isScrollContainer="false"
+        android:scrollIndicators="right"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+</LinearLayout>
