@@ -475,7 +475,7 @@
                 android:textColor="#F3EEEE"
                 android:textSize="16sp"
                 app:cornerRadius="50dp"
-                app:rippleColor="#83EF87" />
+                app:rippleColor="#D5BDAF" />
 
         </LinearLayout>
     </ScrollView>
