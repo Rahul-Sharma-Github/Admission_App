@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FormActivity extends AppCompatActivity {
 
-    //declaring variables of View Types for View Components/Controls
+    //Declaring variables of View Types for View Components/Controls
     Button btnSubmit;
 
     EditText FirstName,LastName;
@@ -26,6 +26,8 @@ public class FormActivity extends AppCompatActivity {
     EditText Nationality,Age;
 
     AutoCompleteTextView Gender;
+    //Array of String type for Gender selection
+    String[] genderData={"Male","Female"};
     EditText Cast;
 
     EditText AadharCardNumber;
@@ -37,10 +39,36 @@ public class FormActivity extends AppCompatActivity {
     EditText RecentCollege;
     EditText Percentage;
 
+
     AutoCompleteTextView LevelOfProgramme, FacultyName, DepartmentName, CourseName;
 
-    CheckBox CheckBoxConfirmation;
+    //Array of String type for "Level of Programme"
+    String[] LevelOfProgrammeData={"Undergraduate Programmes","Postgraduate Programmes","Diploma/Certificate Programmes"};
 
+    //Array of String type for "Faculty Name"
+    String[] FacultyNameUndergraduate={"Faculty of Science","Faculty of Social Science","Faculty of Arts"};
+    String[] FacultyNamePostgraduate={"Faculty of Commerce","Faculty of Management Studies","Faculty of Education","Faculty of Law","Faculty of Science","Faculty of Journalism & Mass Communication","Faculty of Social Sciences","Faculty of Vedic"};
+
+    //Array of String type for "Department Name"
+    //Undergraduate
+    String[] fnUgScience={"Department of Computer Science","Department of Environment Science","Department of Food Science and Nutrition"};
+    String[] fnUgSocialScience={"Department of Yogic Science and Human Consciousness"};
+    String[] fnUgArts={"Department of Fine Arts"};
+
+    //Postgraduate
+    String[] fnPgCommerce={"Department of Commerce"};
+    String[] fnPgManagementStudies={"Department of Management Studies","Department of Small Business Management"};
+    String[] fnPgEducation={"Department of Library and Information Science"};
+    String[] fnPgLaw={"Department of Law"};
+    String[] fnPgScience={"Department of Computer Science","Department of Environment Science","Department of Botany","Department of Food Science and Nutrition","Department of Microbiology","Department of Zoology","Department of Mathematics","Department of Pure and Applied Chemistry","Department of Geoinformatics and Remote sensing"};
+    String[] fnPgJournalism={"Department of Multimedia Technique"};
+    String[] fnPgArts={"Department of Hindi","Department of Fine Arts"};
+    String[] fnPgSocialScience={"Department of Geography","Department of Economics","Department of History","Department of Political Science","Department of Population Studies","Department of Yogic Science"};
+    String[] fnPgVedic={"Department of Vedic Yangmaya"};
+
+
+
+    CheckBox CheckBoxConfirmation;
 
 
     //making instance of AlertDialog.Builder Class
