@@ -36,6 +36,17 @@ public class FormActivity extends AppCompatActivity {
                 builder.setMessage("Do you want to Submit this Form ?");
                 builder.setCancelable(true);
 
+                //'Yes' Button Logic
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        Intent in=new Intent(FormActivity.this,SubmittedActivity.class);
+                        startActivity(in);
+                        finish();
+                    }
+                });
+
 
 
 
