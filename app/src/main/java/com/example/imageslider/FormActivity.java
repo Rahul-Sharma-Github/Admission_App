@@ -5,13 +5,34 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FormActivity extends AppCompatActivity {
 
+    //declaring variables of View Types
     Button btnSubmit;
+
+    EditText FirstName,LastName;
+
+    EditText StreetAddress,City,Region,ZipCode,Country;
+
+    EditText Email,PhoneNo;
+
+    EditText Nationality,Age;
+
+    AutoCompleteTextView Gender;
+    EditText Cast;
+
+    EditText AadharCardNumber;
+
+    EditText CountryOfBirth;
+
+
+
 
     //making instance of AlertDialog.Builder Class
     AlertDialog.Builder builder;

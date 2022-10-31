@@ -83,7 +83,7 @@
                 android:ems="10"
                 android:hint="First Name"
                 android:inputType="textPersonName"
-                android:textColorHint="#757575"
+                android:textColorHint="#616161"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
@@ -96,7 +96,7 @@
                 android:ems="10"
                 android:hint="Last Name"
                 android:inputType="textPersonName"
-                android:textColorHint="#757575"
+                android:textColorHint="#616161"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
@@ -121,7 +121,7 @@
                 android:ems="10"
                 android:hint="Street Address"
                 android:inputType="textPersonName"
-                android:textColorHint="#757575"
+                android:textColorHint="#616161"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
@@ -134,7 +134,7 @@
                 android:ems="10"
                 android:hint="City"
                 android:inputType="textPersonName"
-                android:textColorHint="#757575"
+                android:textColorHint="#616161"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
@@ -147,7 +147,7 @@
                 android:ems="10"
                 android:hint="Region"
                 android:inputType="textPersonName"
-                android:textColorHint="#757575"
+                android:textColorHint="#616161"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
@@ -159,8 +159,8 @@
                 android:layout_marginEnd="50dp"
                 android:ems="10"
                 android:hint="Zip Code"
-                android:inputType="textPersonName"
-                android:textColorHint="#757575"
+                android:inputType="none|number"
+                android:textColorHint="#616161"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
@@ -173,7 +173,7 @@
                 android:ems="10"
                 android:hint="Country"
                 android:inputType="textPersonName"
-                android:textColorHint="#757575"
+                android:textColorHint="#616161"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
@@ -245,7 +245,7 @@
                 android:layout_marginEnd="50dp"
                 android:ems="10"
                 android:hint="Age"
-                android:inputType="textPersonName"
+                android:inputType="none|number"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -304,6 +304,7 @@
                 android:ems="10"
                 android:hint="Aadhar Card Number"
                 android:inputType="number"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -342,14 +343,17 @@
                 android:textColor="#2C2B2B"
                 android:textSize="20sp" />
 
-            <DatePicker
-                android:id="@+id/datePicker1"
+            <EditText
+                android:id="@+id/dateOfBirth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="50dp"
-                android:visibility="visible" />
+                android:ems="10"
+                android:hint="DD/MM/YYYY"
+                android:inputType="date|none"
+                android:textColorHint="#757575" />
 
             <TextView
                 android:id="@+id/tvAD"
@@ -384,7 +388,7 @@
                 android:layout_marginEnd="50dp"
                 android:ems="10"
                 android:hint="Estimated GPA/Percentage"
-                android:inputType="textPersonName"
+                android:inputType="none|number"
                 android:textColorHint="#757575" />
 
             <TextView
