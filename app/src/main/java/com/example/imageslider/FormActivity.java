@@ -47,7 +47,13 @@ public class FormActivity extends AppCompatActivity {
                     }
                 });
 
-
+                //'No' Button Logic
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
 
 
 
