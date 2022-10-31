@@ -198,6 +198,7 @@
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="none|textEmailAddress"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <EditText
@@ -210,6 +211,7 @@
                 android:ems="10"
                 android:hint="Phone No."
                 android:inputType="none|phone"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -234,6 +236,7 @@
                 android:ems="10"
                 android:hint="Nationality"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <EditText
@@ -246,6 +249,7 @@
                 android:ems="10"
                 android:hint="Age"
                 android:inputType="none|number"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -268,6 +272,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="50dp"
                 android:hint="Select Gender"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <EditText
@@ -280,6 +285,7 @@
                 android:ems="10"
                 android:hint="Enter Your Cast"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -329,6 +335,7 @@
                 android:ems="10"
                 android:hint="Country of Birth"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -353,6 +360,7 @@
                 android:ems="10"
                 android:hint="DD/MM/YYYY"
                 android:inputType="date|none"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -377,6 +385,7 @@
                 android:ems="10"
                 android:hint="Most Recent College Attended"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <EditText
@@ -389,6 +398,7 @@
                 android:ems="10"
                 android:hint="Estimated GPA/Percentage"
                 android:inputType="none|number"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <TextView
@@ -426,6 +436,7 @@
                 android:ems="10"
                 android:hint="Enter Faculty Name"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <EditText
@@ -438,6 +449,7 @@
                 android:ems="10"
                 android:hint="Enter Department Name"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
             <EditText
