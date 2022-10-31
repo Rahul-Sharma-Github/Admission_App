@@ -86,7 +86,37 @@ public class FormActivity extends AppCompatActivity {
         btnSubmit=(Button) findViewById(R.id.btnSubmitForm);
 
         //Binding all the View Components/Controls
+        FirstName=findViewById(R.id.fName);
+        LastName=findViewById(R.id.lName);
 
+        StreetAddress=findViewById(R.id.streetAddress);
+        City=findViewById(R.id.cityName);
+        Region=findViewById(R.id.regionName);
+        ZipCode=findViewById(R.id.zcName);
+        Country=findViewById(R.id.countryName);
+
+        Email=findViewById(R.id.emailName);
+        PhoneNo=findViewById(R.id.phoneNumber);
+
+        Nationality=findViewById(R.id.nationalityName);
+        Age=findViewById(R.id.ageName);
+
+        Gender=findViewById(R.id.GenderView);
+        Cast=findViewById(R.id.castName);
+
+        AadharCardNumber=findViewById(R.id.aadharNumber);
+
+        CountryOfBirth=findViewById(R.id.countryBirthName);
+
+        DateOfBirth=findViewById(R.id.dateOfBirth);
+
+        RecentCollege=findViewById(R.id.recentCollegeName);
+        Percentage=findViewById(R.id.estimatedGPApercentage);
+
+        LevelOfProgramme=findViewById(R.id.levelOfProgramme);
+        FacultyName=findViewById(R.id.facultyName);
+        DepartmentName=findViewById(R.id.departmentName);
+        CourseName=findViewById(R.id.courseName);
 
 
         //Navigating page to SubmittedActivity Page
