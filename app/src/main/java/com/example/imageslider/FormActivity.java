@@ -55,6 +55,10 @@ public class FormActivity extends AppCompatActivity {
                     }
                 });
 
+                //Now Creating the Dialog Box and setting it's Title manually
+                AlertDialog alert=builder.create();
+                alert.setTitle("Submit Form");
+                alert.show();
 
 
             }
