@@ -413,57 +413,49 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/levelOfProgramme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="50dp"
-                android:ems="10"
-                android:hint="Level of Programme"
-                android:inputType="textPersonName"
-                android:textColorHint="#757575"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:hint="Level Of Programme"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/facultyName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="50dp"
-                android:ems="10"
-                android:hint="Enter Faculty Name"
-                android:inputType="textPersonName"
+                android:hint="Faculty Name"
                 android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/departmentName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="50dp"
-                android:ems="10"
-                android:hint="Enter Department Name"
-                android:inputType="textPersonName"
+                android:hint="Department Name"
                 android:minHeight="48dp"
                 android:textColorHint="#757575" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/courseName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="50dp"
-                android:ems="10"
-                android:hint="Enter Course Name"
-                android:inputType="textPersonName"
-                android:textColorHint="#757575"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:hint="Course Name"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
 
             <CheckBox
                 android:id="@+id/checkBoxConfirm"
