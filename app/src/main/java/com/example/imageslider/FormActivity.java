@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FormActivity extends AppCompatActivity {
 
-    //declaring variables of View Types
+    //declaring variables of View Types for View Components/Controls
     Button btnSubmit;
 
     EditText FirstName,LastName;
@@ -31,6 +32,14 @@ public class FormActivity extends AppCompatActivity {
 
     EditText CountryOfBirth;
 
+    EditText DateOfBirth;
+
+    EditText RecentCollege;
+    EditText Percentage;
+
+    AutoCompleteTextView LevelOfProgramme, FacultyName, DepartmentName, CourseName;
+
+    CheckBox CheckBoxConfirmation;
 
 
 
@@ -47,6 +56,10 @@ public class FormActivity extends AppCompatActivity {
 
         //Binding the Submit Form Button
         btnSubmit=(Button) findViewById(R.id.btnSubmitForm);
+
+        //Binding all the View Components/Controls
+
+
 
         //Navigating page to SubmittedActivity Page
         btnSubmit.setOnClickListener(new View.OnClickListener() {
