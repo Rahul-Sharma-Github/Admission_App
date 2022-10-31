@@ -21,7 +21,7 @@ public class IntroActivity extends AppCompatActivity {
         //Adding postDelayed() method to wait for a specific time
         handler.postDelayed(new Runnable() {
             @Override
-            //after a specific time the it Navigate to the MainActivity Page (Home Page)
+            //after a specific time it Navigate to the MainActivity Page (Home Page)
             public void run() {
                 Intent i=new Intent(IntroActivity.this,MainActivity.class);
                 startActivity(i);
