@@ -1,10 +1,14 @@
 package com.example.imageslider;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -43,7 +47,7 @@ public class FormActivity extends AppCompatActivity {
     AutoCompleteTextView LevelOfProgramme, FacultyName, DepartmentName, CourseName;
 
     //Array of String type for "Level of Programme"
-    String[] LevelOfProgrammeData={"Undergraduate Programmes","Postgraduate Programmes","Diploma/Certificate Programmes"};
+    String[] LevelOfProgrammeData={"Undergraduate Programmes","Postgraduate Programmes"};
 
     //Array of String type for "Faculty Name"
     String[] FacultyNameUndergraduate={"Faculty of Science","Faculty of Social Science","Faculty of Arts"};
@@ -74,6 +78,7 @@ public class FormActivity extends AppCompatActivity {
     //making instance of AlertDialog.Builder Class
     AlertDialog.Builder builder;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,40 +89,6 @@ public class FormActivity extends AppCompatActivity {
 
         //Binding the Submit Form Button
         btnSubmit=(Button) findViewById(R.id.btnSubmitForm);
-
-        //Binding all the View Components/Controls
-        FirstName=findViewById(R.id.fName);
-        LastName=findViewById(R.id.lName);
-
-        StreetAddress=findViewById(R.id.streetAddress);
-        City=findViewById(R.id.cityName);
-        Region=findViewById(R.id.regionName);
-        ZipCode=findViewById(R.id.zcName);
-        Country=findViewById(R.id.countryName);
-
-        Email=findViewById(R.id.emailName);
-        PhoneNo=findViewById(R.id.phoneNumber);
-
-        Nationality=findViewById(R.id.nationalityName);
-        Age=findViewById(R.id.ageName);
-
-        Gender=findViewById(R.id.GenderView);
-        Cast=findViewById(R.id.castName);
-
-        AadharCardNumber=findViewById(R.id.aadharNumber);
-
-        CountryOfBirth=findViewById(R.id.countryBirthName);
-
-        DateOfBirth=findViewById(R.id.dateOfBirth);
-
-        RecentCollege=findViewById(R.id.recentCollegeName);
-        Percentage=findViewById(R.id.estimatedGPApercentage);
-
-        LevelOfProgramme=findViewById(R.id.levelOfProgramme);
-        FacultyName=findViewById(R.id.facultyName);
-        DepartmentName=findViewById(R.id.departmentName);
-        CourseName=findViewById(R.id.courseName);
-
 
         //Navigating page to SubmittedActivity Page
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -158,5 +129,115 @@ public class FormActivity extends AppCompatActivity {
 
 
 
+
+
+        //Binding all the View Components/Controls
+        FirstName=findViewById(R.id.fName);
+        LastName=findViewById(R.id.lName);
+
+        StreetAddress=findViewById(R.id.streetAddress);
+        City=findViewById(R.id.cityName);
+        Region=findViewById(R.id.regionName);
+        ZipCode=findViewById(R.id.zcName);
+        Country=findViewById(R.id.countryName);
+
+        Email=findViewById(R.id.emailName);
+        PhoneNo=findViewById(R.id.phoneNumber);
+
+        Nationality=findViewById(R.id.nationalityName);
+        Age=findViewById(R.id.ageName);
+
+        Gender=findViewById(R.id.GenderView);
+        Cast=findViewById(R.id.castName);
+
+        AadharCardNumber=findViewById(R.id.aadharNumber);
+
+        CountryOfBirth=findViewById(R.id.countryBirthName);
+
+        DateOfBirth=findViewById(R.id.dateOfBirth);
+
+        RecentCollege=findViewById(R.id.recentCollegeName);
+        Percentage=findViewById(R.id.estimatedGPApercentage);
+
+        LevelOfProgramme=findViewById(R.id.levelOfProgramme);
+        FacultyName=findViewById(R.id.facultyName);
+        DepartmentName=findViewById(R.id.departmentName);
+        CourseName=findViewById(R.id.courseName);
+
+
+
+        //Calling genderList() Method to show genderData
+        genderList();
+
+        //Calling levelOfProgramme() Method here to populate LevelofProgrammeData
+        LevelOfProgramme.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                    levelOfProgramme(LevelOfProgrammeData);
+                return false;
+            }
+        });
+
+
+        //Calling facultyName() Method here to populate FacultyName according to the selected LevelOfProgramme
+        FacultyName.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(LevelOfProgramme.getText().toString().equals("")){
+                    //Leave Empty
+                }else if(LevelOfProgramme.getText().toString().equals("Undergraduate Programmes")){
+                    facultyName(FacultyNameUndergraduate);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes")){
+                    facultyName(FacultyNamePostgraduate);
+                }
+
+
+                return false;
+            }
+        });
+
+    }
+
+    private void facultyName(String[] FacultyData) {
+        //Setting Data
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, FacultyData);
+
+        FacultyName.setAdapter(adapter);
+        FacultyName.setThreshold(1);
+        FacultyName.setTextColor(Color.BLACK);
+        //Showing Full List on Touch Event
+        FacultyName.showDropDown();
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private void levelOfProgramme(String[] LevelOfProgrammeData) {
+        //Setting Data
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, LevelOfProgrammeData);
+
+        LevelOfProgramme.setAdapter(adapter);
+        LevelOfProgramme.setThreshold(1);
+        LevelOfProgramme.setTextColor(Color.BLACK);
+        //Showing Full List on Touch Event
+        LevelOfProgramme.showDropDown();
+
+
+    }
+
+
+
+    @SuppressLint("ClickableViewAccessibility")
+    private void genderList() {
+        //Setting GenderData
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, genderData);
+
+        Gender.setAdapter(adapter);
+        Gender.setThreshold(1);
+        Gender.setTextColor(Color.BLACK);
+
+        //Showing Full List on Touch Event
+        Gender.setOnTouchListener((v, event) -> {
+            Gender.showDropDown();
+            return false;
+        });
     }
 }
