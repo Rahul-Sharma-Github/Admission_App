@@ -51,7 +51,7 @@ public class FormActivity extends AppCompatActivity {
 
     //Array of String type for "Faculty Name"
     String[] FacultyNameUndergraduate={"Faculty of Science","Faculty of Social Science","Faculty of Arts"};
-    String[] FacultyNamePostgraduate={"Faculty of Commerce","Faculty of Management Studies","Faculty of Education","Faculty of Law","Faculty of Science","Faculty of Journalism & Mass Communication","Faculty of Social Sciences","Faculty of Vedic"};
+    String[] FacultyNamePostgraduate={"Faculty of Commerce","Faculty of Management Studies","Faculty of Education","Faculty of Law","Faculty of Science","Faculty of Journalism & Mass Communication","Faculty of Arts","Faculty of Social Sciences","Faculty of Vedic"};
 
     //Array of String type for "Department Name"
     //Undergraduate
@@ -166,13 +166,16 @@ public class FormActivity extends AppCompatActivity {
 
 
 
-        //Calling genderList() Method to show genderData
+        //Calling genderList() Method to Populate genderData
         genderList();
 
         //Calling levelOfProgramme() Method here to populate LevelofProgrammeData
         LevelOfProgramme.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                    //set text as empty
+                    FacultyName.getText().clear();
+
                     levelOfProgramme(LevelOfProgrammeData);
                 return false;
             }
@@ -183,6 +186,9 @@ public class FormActivity extends AppCompatActivity {
         FacultyName.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                //set text as empty
+                DepartmentName.getText().clear();
+
                 if(LevelOfProgramme.getText().toString().equals("")){
                     //Leave Empty
                 }else if(LevelOfProgramme.getText().toString().equals("Undergraduate Programmes")){
@@ -190,12 +196,68 @@ public class FormActivity extends AppCompatActivity {
                 }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes")){
                     facultyName(FacultyNamePostgraduate);
                 }
-
-
                 return false;
             }
         });
 
+
+        //Calling departmentName() Method here to populate Department Names according to the selected LevelOfProgramme and FacultyName
+        DepartmentName.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                //for Undergraduate
+                if(LevelOfProgramme.getText().toString().equals("") && FacultyName.getText().toString().equals("")){
+                    //Leave Empty
+                }else if(LevelOfProgramme.getText().toString().equals("Undergraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Science")){
+                    departName(fnUgScience);
+                }else if(LevelOfProgramme.getText().toString().equals("Undergraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Social Science")){
+                    departName(fnUgSocialScience);
+                }else if(LevelOfProgramme.getText().toString().equals("Undergraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Arts")){
+                    departName(fnUgArts);
+                }
+
+                //for Postgraduates
+                if(LevelOfProgramme.getText().toString().equals("") && FacultyName.getText().toString().equals("")){
+                    //Leave Empty
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Commerce")){
+                    departName(fnPgCommerce);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Management Studies")){
+                    departName(fnPgManagementStudies);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Education")){
+                    departName(fnPgEducation);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Law")){
+                    departName(fnPgLaw);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Science")){
+                    departName(fnPgScience);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Journalism & Mass Communication")){
+                    departName(fnPgJournalism);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Arts")){
+                    departName(fnPgArts);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Social Sciences")){
+                    departName(fnPgSocialScience);
+                }else if(LevelOfProgramme.getText().toString().equals("Postgraduate Programmes") && FacultyName.getText().toString().equals("Faculty of Vedic")){
+                    departName(fnPgVedic);
+                }
+                return false;
+            }
+        });
+
+
+    }
+
+
+
+
+
+    private void departName(String[] DepartmentData) {
+        //Setting Data
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, DepartmentData);
+
+        DepartmentName.setAdapter(adapter);
+        DepartmentName.setThreshold(1);
+        DepartmentName.setTextColor(Color.BLACK);
+        //Showing Full List on Touch Event
+        DepartmentName.showDropDown();
     }
 
     private void facultyName(String[] FacultyData) {
