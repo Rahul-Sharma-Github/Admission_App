@@ -258,6 +258,8 @@ public class FormActivity extends AppCompatActivity {
 
     }
 
+
+    //Checking Form Validation and returning true/false according to it
     private boolean isFormValid() {
         if (FirstName.getText().toString().equals("")){
             return true;
@@ -309,7 +311,7 @@ public class FormActivity extends AppCompatActivity {
     }
 
 
-    //Checking Form Validation and returning true/false according to it
+
 
 
 
