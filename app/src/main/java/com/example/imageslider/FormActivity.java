@@ -13,8 +13,10 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class FormActivity extends AppCompatActivity {
 
@@ -33,6 +35,7 @@ public class FormActivity extends AppCompatActivity {
     //Array of String type for Gender selection
     String[] genderData={"Male","Female"};
     EditText Cast;
+
 
     EditText AadharCardNumber;
 
@@ -84,53 +87,6 @@ public class FormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
-        //Showing AlertDialog on current activity
-        builder=new AlertDialog.Builder(this);
-
-        //Binding the Submit Form Button
-        btnSubmit=(Button) findViewById(R.id.btnSubmitForm);
-
-        //Navigating page to SubmittedActivity Page
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //setting builder properties
-                builder.setMessage("Do you want to Submit this Form ?");
-                builder.setCancelable(true);
-
-                //'Yes' Button Logic
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                        Intent in=new Intent(FormActivity.this,SubmittedActivity.class);
-                        startActivity(in);
-                        finish();
-                    }
-                });
-
-                //'No' Button Logic
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-                //Now Creating the Dialog Box and setting it's Title manually
-                AlertDialog alert=builder.create();
-                alert.setTitle("Submit Form");
-                alert.show();
-
-
-            }
-        });
-
-
-
-
-
         //Binding all the View Components/Controls
         FirstName=findViewById(R.id.fName);
         LastName=findViewById(R.id.lName);
@@ -165,6 +121,63 @@ public class FormActivity extends AppCompatActivity {
         CourseName=findViewById(R.id.courseName);
 
 
+
+
+
+        //Showing AlertDialog on current activity
+        builder=new AlertDialog.Builder(this);
+
+        //Binding the Submit Form Button
+        btnSubmit=(Button) findViewById(R.id.btnSubmitForm);
+
+        //Navigating page to SubmittedActivity Page
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(!isFormValid()) {
+
+                    //setting builder properties
+                    builder.setMessage("Do you want to Submit this Form ?");
+                    builder.setCancelable(true);
+
+                    //'Yes' Button Logic
+                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                            Intent in = new Intent(FormActivity.this, SubmittedActivity.class);
+                            startActivity(in);
+                            finish();
+                        }
+                    });
+
+                    //'No' Button Logic
+                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    //Now Creating the Dialog Box and setting it's Title manually
+                    AlertDialog alert = builder.create();
+                    alert.setTitle("Submit Form");
+                    alert.show();
+
+                }else{
+                    Toast.makeText(FormActivity.this, "Please, Fill the Required Fields !", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+
+
+
+
+
+    //Populating the Data
 
         //Calling genderList() Method to Populate genderData
         genderList();
@@ -245,7 +258,58 @@ public class FormActivity extends AppCompatActivity {
 
     }
 
+    private boolean isFormValid() {
+        if (FirstName.getText().toString().equals("")){
+            return true;
+        }else if(LastName.getText().toString().equals("")){
+            return true;
+        }else if(StreetAddress.getText().toString().equals("")){
+            return true;
+        }else if(City.getText().toString().equals("")){
+            return true;
+        }else if(Region.getText().toString().equals("")){
+            return true;
+        }else if(ZipCode.getText().toString().equals("")){
+            return true;
+        }else if(Country.getText().toString().equals("")){
+            return true;
+        }else if(Email.getText().toString().equals("")){
+            return true;
+        }else if(PhoneNo.getText().toString().equals("")){
+            return true;
+        }else if(Nationality.getText().toString().equals("")){
+            return true;
+        }else if(Age.getText().toString().equals("")){
+            return true;
+        }else if(Gender.getText().toString().equals("")){
+            return true;
+        }else if(Cast.getText().toString().equals("")){
+            return true;
+        }else if(AadharCardNumber.getText().toString().equals("")){
+            return true;
+        }else if(CountryOfBirth.getText().toString().equals("")){
+            return true;
+        }else if(DateOfBirth.getText().toString().equals("")){
+            return true;
+        }else if(RecentCollege.getText().toString().equals("")){
+            return true;
+        }else if(Percentage.getText().toString().equals("")){
+            return true;
+        }else if(LevelOfProgramme.getText().toString().equals("")){
+            return true;
+        }else if(FacultyName.getText().toString().equals("")){
+            return true;
+        }else if(DepartmentName.getText().toString().equals("")){
+            return true;
+        }else if(CourseName.getText().toString().equals("")){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
+
+    //Checking Form Validation and returning true/false according to it
 
 
 
