@@ -42,6 +42,7 @@
         android:shadowColor="#E29E9E"
         android:text="Admission Details"
         android:textAlignment="center"
+        android:textColor="#605E5E"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
