@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in=new Intent(MainActivity.this,FormActivity.class);
                 startActivity(in);
-                finish();
+
             }
         });
 

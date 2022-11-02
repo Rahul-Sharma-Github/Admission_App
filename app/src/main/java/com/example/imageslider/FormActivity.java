@@ -13,6 +13,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class FormActivity extends AppCompatActivity {
 
     //Declaring variables of View Types for View Components/Controls
+    ImageButton formBackBtn;
     Button btnSubmit;
 
     EditText FirstName,LastName;
@@ -81,6 +83,8 @@ public class FormActivity extends AppCompatActivity {
     //making instance of AlertDialog.Builder Class
     AlertDialog.Builder builder;
 
+
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,12 +124,15 @@ public class FormActivity extends AppCompatActivity {
         DepartmentName=findViewById(R.id.departmentName);
         CourseName=findViewById(R.id.courseName);
 
-
+        formBackBtn=findViewById(R.id.formBackButton);
 
 
 
         //Showing AlertDialog on current activity
         builder=new AlertDialog.Builder(this);
+
+
+
 
         //Binding the Submit Form Button
         btnSubmit=(Button) findViewById(R.id.btnSubmitForm);
@@ -173,7 +180,42 @@ public class FormActivity extends AppCompatActivity {
 
 
 
+        //Back Button Logic to Navigate to HomePage[MainActivity]
+        formBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                //setting builder properties
+                builder.setMessage("Do you want to cancel this form submission ?");
+                builder.setCancelable(true);
+
+                //'Yes' Button Logic
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        Intent in = new Intent(FormActivity.this, MainActivity.class);
+                        startActivity(in);
+                        Toast.makeText(FormActivity.this, "Form Canceled", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                });
+
+                //'No' Button Logic
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        Toast.makeText(FormActivity.this, "Continue Filling the Form ...", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                //Now Creating the Dialog Box and setting it's Title manually
+                AlertDialog alert = builder.create();
+                alert.setTitle("Cancel Form Submission");
+                alert.show();
+            }
+        });
 
 
 
