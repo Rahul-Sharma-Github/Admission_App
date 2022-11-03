@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,12 +15,15 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class FormActivity extends AppCompatActivity {
+    //Declaring Handler type handler
+    public Handler handler;
 
     //Declaring variables of View Types for View Components/Controls
     ImageButton formBackBtn;
@@ -153,19 +157,34 @@ public class FormActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
-                            Intent in = new Intent(FormActivity.this, SubmittedActivity.class);
-                            startActivity(in);
-                            finish();
-                        }
-                    });
 
-                    //'No' Button Logic
-                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            //making an instance of Handler Class
+                            handler = new Handler();
+                            ProgressBar pbar = findViewById(R.id.progressBar3);
+                            pbar.setVisibility(View.VISIBLE);
+
+                            //Adding postDelayed() method to wait for a specific time
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    pbar.setVisibility(View.GONE);
+                                    //Navigating to SubmittedActivity Page
+                                    Intent in = new Intent(FormActivity.this, SubmittedActivity.class);
+                                    startActivity(in);
+                                    finish();
+                                }
+                            }, 2000);
+
+
+                        }
+                    }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
                         }
                     });
+
+                    //'No' Button Logic
 
                     //Now Creating the Dialog Box and setting it's Title manually
                     AlertDialog alert = builder.create();
@@ -230,6 +249,7 @@ public class FormActivity extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                     //set text as empty
                     FacultyName.getText().clear();
+                    DepartmentName.getText().clear();
 
                     levelOfProgramme(LevelOfProgrammeData);
                 return false;

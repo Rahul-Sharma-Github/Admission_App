@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent in=new Intent(MainActivity.this,FormActivity.class);
                 startActivity(in);
-
+                finish();
             }
         });
 
@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1=new Intent(getApplicationContext(),AdmissionNotification.class);
                 intent1.putExtra("pdf_url","https://drive.google.com/file/d/11CaBgX6jcqc336eW6KtJRXXp11ss_Qom/view?usp=sharing");
                 startActivity(intent1);
+                finish();
             }
         });
 
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent2=new Intent(getApplicationContext(),CourseEligibility.class);
                 intent2.putExtra("pdf_url","https://drive.google.com/file/d/14IP1lM2xbUSNWPEb_RRUMYDjJ75fzdoz/view?usp=sharing");
                 startActivity(intent2);
+                finish();
             }
         });
 
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent3=new Intent(getApplicationContext(),Prospectus.class);
                 intent3.putExtra("pdf_url","https://drive.google.com/file/d/12L3m4_Wjzs0qkcImwhbe7eth33Gdoy1R/view?usp=sharing");
                 startActivity(intent3);
+                finish();
             }
         });
 

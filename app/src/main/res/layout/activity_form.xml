@@ -471,12 +471,20 @@
                 android:textColor="#2E2D2D"
                 android:textSize="16sp" />
 
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/btnSubmitForm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="80dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginEnd="80dp"
                 android:layout_marginBottom="100dp"
                 android:backgroundTint="#333333"
