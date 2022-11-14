@@ -1,6 +1,7 @@
 package com.example.imageslider;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     //Declaration of Variables for Binding
     Chip AdmissionChipButton;
 
-    Chip chip1,chip2,chip3;
+    Chip chip1,chip2,chip3,chipWebsite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         chip2=(Chip) findViewById(R.id.chip2);
         chip3=(Chip) findViewById(R.id.chip3);
 
+        chipWebsite=(Chip) findViewById(R.id.chipVisitSite);
 
         //chip1 click event to open Admission Notification PDF Page
         chip1.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +100,18 @@ public class MainActivity extends AppCompatActivity {
                 intent3.putExtra("pdf_url","https://drive.google.com/file/d/12L3m4_Wjzs0qkcImwhbe7eth33Gdoy1R/view?usp=sharing");
                 startActivity(intent3);
                 finish();
+            }
+        });
+
+
+
+        //chipVisitSite click event to open official website of MDSU Admission
+        chipWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri=Uri.parse("https://www.google.co.in/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
 
