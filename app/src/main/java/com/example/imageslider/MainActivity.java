@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         chipWebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri=Uri.parse("https://www.google.co.in/");
+                Uri uri=Uri.parse("https://www.mdsuajmer.ac.in/");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
