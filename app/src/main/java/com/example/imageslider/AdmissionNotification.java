@@ -47,7 +47,7 @@ public class AdmissionNotification extends AppCompatActivity {
                 webViewAdmissionNotification.getSettings().setJavaScriptEnabled(true);
                 webViewAdmissionNotification.loadUrl(url);
             }
-        },2000);
+        },1000);
 
         //binding back button
         formBackButtonAN=findViewById(R.id.formBackButtonAN);

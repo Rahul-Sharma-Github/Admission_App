@@ -44,7 +44,7 @@ public class CourseEligibility extends AppCompatActivity {
                 webViewCourseEligibility.getSettings().setJavaScriptEnabled(true);
                 webViewCourseEligibility.loadUrl(url);
             }
-        },2000);
+        },1000);
 
         backBtnC=findViewById(R.id.formBackButtonCe);
 

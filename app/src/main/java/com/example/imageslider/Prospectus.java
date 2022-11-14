@@ -48,7 +48,7 @@ public class Prospectus extends AppCompatActivity {
                 webViewProspectus.loadUrl(url);
 
             }
-        },2000);
+        },1000);
 
 
 

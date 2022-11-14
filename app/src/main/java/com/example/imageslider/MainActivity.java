@@ -13,6 +13,7 @@ import com.smarteist.autoimageslider.SliderView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Image data for sliderview
     SliderView sliderView;
     int[] images = {R.drawable.one,
     R.drawable.two,

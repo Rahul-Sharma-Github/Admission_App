@@ -27,7 +27,7 @@ public class IntroActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        },3000); // 3 Seconds Delay
+        },1000); // 3 Seconds Delay
 
     }
 }

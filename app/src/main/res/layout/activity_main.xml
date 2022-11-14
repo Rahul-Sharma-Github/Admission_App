@@ -52,7 +52,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/scrollView1"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,6 +126,28 @@
             app:textEndPadding="10dp"
             app:textStartPadding="10dp" />
 
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipVisitSite"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:includeFontPadding="false"
+            android:text="Visit Official Site"
+            android:textAlignment="center"
+            android:textColor="#85380C"
+            android:textSize="16sp"
+            app:checkedIconVisible="true"
+            app:chipIconVisible="false"
+            app:chipMinHeight="42dp"
+            app:chipSurfaceColor="#F4EADF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip3"
+            app:textEndPadding="10dp"
+            app:textStartPadding="10dp" />
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
@@ -134,7 +156,9 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="parent">
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
