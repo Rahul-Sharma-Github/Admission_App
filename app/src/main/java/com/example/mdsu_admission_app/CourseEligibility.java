@@ -1,4 +1,7 @@
-package com.example.imageslider;
+package com.example.mdsu_admission_app;
+
+import static com.example.imageslider.R.id;
+import static com.example.imageslider.R.layout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,10 +24,10 @@ public class CourseEligibility extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course_eligibility);
+        setContentView(layout.activity_course_eligibility);
 
         //Binding
-        pBarC=findViewById(R.id.pBarCourse);
+        pBarC=findViewById(id.pBarCourse);
 
         pBarC.setVisibility(View.VISIBLE);
 
@@ -38,7 +41,7 @@ public class CourseEligibility extends AppCompatActivity {
 
                 //Loading the PDF
                 String url=getIntent().getStringExtra("pdf_url");
-                WebView webViewCourseEligibility=findViewById(R.id.webViewProspectus);
+                WebView webViewCourseEligibility=findViewById(id.webViewProspectus);
                 webViewCourseEligibility.setWebViewClient(new WebViewClient());
                 webViewCourseEligibility.getSettings().setSupportZoom(true);
                 webViewCourseEligibility.getSettings().setJavaScriptEnabled(true);
@@ -46,7 +49,7 @@ public class CourseEligibility extends AppCompatActivity {
             }
         },1000);
 
-        backBtnC=findViewById(R.id.formBackButtonCe);
+        backBtnC=findViewById(id.formBackButtonCe);
 
         //back button Event
         backBtnC.setOnClickListener(new View.OnClickListener() {

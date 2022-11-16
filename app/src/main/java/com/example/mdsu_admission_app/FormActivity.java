@@ -1,4 +1,4 @@
-package com.example.imageslider;
+package com.example.mdsu_admission_app;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -19,6 +19,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.imageslider.R;
 
 
 public class FormActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.imageslider;
+package com.example.mdsu_admission_app;
 
 import org.testng.annotations.Test;
 

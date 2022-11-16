@@ -1,10 +1,12 @@
-package com.example.imageslider;
+package com.example.mdsu_admission_app;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.imageslider.R;
 
 public class IntroActivity extends AppCompatActivity {
 

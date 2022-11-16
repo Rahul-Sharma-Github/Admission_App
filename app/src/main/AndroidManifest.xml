@@ -22,28 +22,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Imageslider">
         <activity
-            android:name=".Prospectus"
+            android:name="com.example.mdsu_admission_app.Prospectus"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CourseEligibility"
+            android:name="com.example.mdsu_admission_app.CourseEligibility"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdmissionNotification"
+            android:name="com.example.mdsu_admission_app.AdmissionNotification"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".IntroActivity"
+            android:name="com.example.mdsu_admission_app.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,21 +56,21 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".FormActivity"
+            android:name="com.example.mdsu_admission_app.FormActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SubmittedActivity"
+            android:name="com.example.mdsu_admission_app.SubmittedActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.mdsu_admission_app.MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
