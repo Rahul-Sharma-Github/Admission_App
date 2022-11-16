@@ -43,9 +43,15 @@ public class MainActivity extends AppCompatActivity {
         AdmissionChipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in=new Intent(MainActivity.this,FormActivity.class);
+                /*Intent in=new Intent(MainActivity.this,FormActivity.class);
                 startActivity(in);
-                finish();
+                finish();*/
+
+                //Visiting the Admission Portal Site
+                Uri uri=Uri.parse("https://www.mdsuajmer.ac.in/admission/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
             }
         });
 
@@ -109,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         chipWebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri=Uri.parse("https://www.mdsuajmer.ac.in/");
+                Uri uri=Uri.parse("https://www.mdsuajmer.ac.in/admission/new/fees_pay.php");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }

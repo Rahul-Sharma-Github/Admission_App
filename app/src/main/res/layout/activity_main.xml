@@ -135,7 +135,7 @@
             android:autoLink="web"
             android:includeFontPadding="false"
             android:linksClickable="false"
-            android:text="Visit Official Site"
+            android:text="Pay Fees Online"
             android:textAlignment="center"
             android:textColor="#85380C"
             android:textSize="16sp"
