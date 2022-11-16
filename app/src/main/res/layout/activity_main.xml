@@ -127,7 +127,7 @@
             app:textStartPadding="10dp" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipVisitSite"
+            android:id="@+id/chipPayFees"
             style="@style/Widget.MaterialComponents.Chip.Action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -147,6 +147,30 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/chip3"
+            app:textEndPadding="10dp"
+            app:textStartPadding="10dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipEditForm"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:autoLink="web"
+            android:includeFontPadding="false"
+            android:linksClickable="false"
+            android:text="Edit Form"
+            android:textAlignment="center"
+            android:textColor="#85380C"
+            android:textSize="16sp"
+            app:checkedIconVisible="true"
+            app:chipIconVisible="false"
+            app:chipMinHeight="42dp"
+            app:chipSurfaceColor="#F4EADF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipPayFees"
             app:textEndPadding="10dp"
             app:textStartPadding="10dp" />
 

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     //Declaration of Variables for Binding
     Chip AdmissionChipButton;
 
-    Chip chip1,chip2,chip3,chipWebsite;
+    Chip chip1,chip2,chip3,chipPayFeesOnline,chipEditForm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
         chip2=(Chip) findViewById(R.id.chip2);
         chip3=(Chip) findViewById(R.id.chip3);
 
-        chipWebsite=(Chip) findViewById(R.id.chipVisitSite);
+        //binding chip buttons of online admission portal
+        chipPayFeesOnline=(Chip) findViewById(R.id.chipPayFees);
+        chipEditForm=(Chip)findViewById(R.id.chipEditForm);
 
         //chip1 click event to open Admission Notification PDF Page
         chip1.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //chipVisitSite click event to open official website of MDSU Admission
-        chipWebsite.setOnClickListener(new View.OnClickListener() {
+        chipPayFeesOnline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Uri uri=Uri.parse("https://www.mdsuajmer.ac.in/admission/new/fees_pay.php");
@@ -122,6 +124,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //click event to open Edit Form page of MDSU online admission portal
+        chipEditForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri=Uri.parse("https://mdsuajmer.ac.in/admission/new.php");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
 
     }
