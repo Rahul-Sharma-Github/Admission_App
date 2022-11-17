@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayoutSubmitted"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5EBE0"
+    android:background="#323031"
     tools:context=".SubmittedActivity">
 
     <TextView
@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif"
         android:text="Your Admission Form"
         android:textAlignment="center"
-        android:textColor="#6E6C6C"
+        android:textColor="#ffd100"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -30,7 +30,7 @@
         android:layout_marginTop="30dp"
         android:text="Successfully Submitted"
         android:textAlignment="center"
-        android:textColor="#5E5F5E"
+        android:textColor="#ffee32"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         android:layout_marginTop="70dp"
         android:text="Confirmation will be sent to your Email !"
         android:textAlignment="center"
-        android:textColor="#0DAC57"
+        android:textColor="#ffd100"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

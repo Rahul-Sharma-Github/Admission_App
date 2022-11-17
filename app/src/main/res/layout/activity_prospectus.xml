@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5EBE0"
+    android:background="#323031"
     android:orientation="vertical"
     tools:context=".Prospectus">
 
@@ -14,11 +14,11 @@
 
         <ImageButton
             android:id="@+id/formBackButtonP"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="35dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="48dp"
-            android:backgroundTint="#F4EADF"
+            android:backgroundTint="#FFC857"
             android:scaleType="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,12 +28,12 @@
             android:id="@+id/prospectusTitle"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="48dp"
             android:singleLine="false"
             android:text="Prospectus 2022-23"
             android:textAlignment="center"
-            android:textColor="#1E1D1D"
+            android:textColor="#FFC857"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/formBackButtonP"
@@ -47,13 +47,18 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
+        android:backgroundTint="#FFC857"
         android:backgroundTintMode="add" />
 
     <ProgressBar
         android:id="@+id/pBarProspectus"
         style="?android:attr/progressBarStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:backgroundTint="#FFC857"
+        android:backgroundTintMode="multiply"
+        android:indeterminate="true"
+        android:indeterminateTint="#FFC857" />
 
     <WebView
         android:id="@+id/webViewProspectus"
@@ -61,6 +66,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_margin="30dp"
+        android:background="#323031"
+        android:backgroundTint="#323031"
+        android:backgroundTintMode="add"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:foregroundGravity="center"

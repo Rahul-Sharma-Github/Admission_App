@@ -1,6 +1,7 @@
 package com.example.mdsu_admission_app;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -47,6 +48,7 @@ public class AdmissionNotification extends AppCompatActivity {
                 webViewAdmissionNotification.setWebViewClient(new WebViewClient());
                 webViewAdmissionNotification.getSettings().setSupportZoom(true);
                 webViewAdmissionNotification.getSettings().setJavaScriptEnabled(true);
+                webViewAdmissionNotification.setBackgroundColor(Color.parseColor("#343A40"));
                 webViewAdmissionNotification.loadUrl(url);
             }
         },1000);

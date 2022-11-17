@@ -4,6 +4,7 @@ import static com.example.imageslider.R.id;
 import static com.example.imageslider.R.layout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -45,6 +46,7 @@ public class CourseEligibility extends AppCompatActivity {
                 webViewCourseEligibility.setWebViewClient(new WebViewClient());
                 webViewCourseEligibility.getSettings().setSupportZoom(true);
                 webViewCourseEligibility.getSettings().setJavaScriptEnabled(true);
+                webViewCourseEligibility.setBackgroundColor(Color.parseColor("#343A40"));
                 webViewCourseEligibility.loadUrl(url);
             }
         },1000);
