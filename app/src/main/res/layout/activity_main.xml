@@ -37,7 +37,7 @@
         android:id="@+id/titleHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-black"
         android:shadowColor="#FFC857"
         android:text="Admission Details"
@@ -54,8 +54,15 @@
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
+        android:isScrollContainer="true"
+        android:nestedScrollingEnabled="true"
+        android:scrollIndicators="right"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleHome">
 
@@ -127,30 +134,6 @@
             app:textStartPadding="10dp" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipPayFees"
-            style="@style/Widget.MaterialComponents.Chip.Action"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:autoLink="web"
-            android:includeFontPadding="false"
-            android:linksClickable="false"
-            android:text="Pay Fees Online"
-            android:textAlignment="center"
-            android:textColor="#DB3A34"
-            android:textSize="16sp"
-            app:checkedIconVisible="true"
-            app:chipIconVisible="false"
-            app:chipMinHeight="42dp"
-            app:chipSurfaceColor="#F4EADF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chip3"
-            app:textEndPadding="10dp"
-            app:textStartPadding="10dp" />
-
-        <com.google.android.material.chip.Chip
             android:id="@+id/chipEditForm"
             style="@style/Widget.MaterialComponents.Chip.Action"
             android:layout_width="wrap_content"
@@ -170,7 +153,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chipPayFees"
+            app:layout_constraintTop_toBottomOf="@+id/chip3"
             app:textEndPadding="10dp"
             app:textStartPadding="10dp" />
 
@@ -192,7 +175,7 @@
         android:id="@+id/chip_Admission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="serif"
         android:includeFontPadding="false"
         android:text="Get Admission Now"

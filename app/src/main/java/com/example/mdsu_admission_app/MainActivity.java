@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         chip3=(Chip) findViewById(R.id.chip3);
 
         //binding chip buttons of online admission portal
-        chipPayFeesOnline=(Chip) findViewById(R.id.chipPayFees);
+        //chipPayFeesOnline=(Chip) findViewById(R.id.chipPayFees);
         chipEditForm=(Chip)findViewById(R.id.chipEditForm);
 
         //chip1 click event to open Admission Notification PDF Page
@@ -115,14 +115,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         //chipVisitSite click event to open official website of MDSU Admission
-        chipPayFeesOnline.setOnClickListener(new View.OnClickListener() {
+        /*chipPayFeesOnline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Uri uri=Uri.parse("https://www.mdsuajmer.ac.in/admission/new/fees_pay.php");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
         //click event to open Edit Form page of MDSU online admission portal
